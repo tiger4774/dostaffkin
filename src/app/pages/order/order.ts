@@ -7,7 +7,7 @@ declare var ymaps: any;
 @Component({
   selector: 'app-order',
   imports: [Header, UpperCasePipe, ReactiveFormsModule],
-  templateUrl: './order.html',
+   templateUrl: './order.html',
   styleUrl: './order.css',
 })
 export class Order {
