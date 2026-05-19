@@ -17,8 +17,8 @@ export class Order {
   public map: any;
   private mapRoute: any;
 
-  public routeForm: FormGroup | undefined;
-  public orderForm: FormGroup | undefined;
+  public routeForm: FormGroup;
+  public orderForm: FormGroup;
 
   public orderId: any = signal(null);
   public calculationResult: any = signal(null);
@@ -112,9 +112,7 @@ export class Order {
 
     this.mapRoute.model.events.add('requestfail', () => this.failedCalculation());
   }
-  failedCalculation() {
-    throw new Error('Method not implemented.');
-  }
+  
   private failedCalculation() {
     this.calculationResult.set(null);
     alert('Не удалось построить маршрут. Проверьте адреса и выбранные параметры.');
